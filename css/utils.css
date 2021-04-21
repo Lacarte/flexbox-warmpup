@@ -1,0 +1,48 @@
+.divider,
+.divider-vert {
+  display: block;
+  position: relative;
+}
+
+.divider-vert {
+  display: block;
+  padding: 0.8rem;
+}
+
+.divider-vert[data-content]::after {
+  left: 50%;
+  padding: 0.2rem 0;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+
+.divider-vert[data-content]::after, .divider[data-content]::after {
+    background: #fff;
+    color: #bcc3ce;
+    content: attr(data-content);
+    display: inline-block;
+    font-size: .7rem;
+    padding: 0 .4rem;
+    transform: translateY(-.65rem);
+}
+
+
+
+button {
+    height: 40px;
+    width: 40px;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    border: 2px solid rgba(0, 0, 0, 0.4);
+    border-top-color: #fff;
+    border-bottom-color: #fff;
+    animation: spinner3 800ms ease infinite;
+    }
+    @keyframes spinner3 {
+    to {
+    transform: rotate(360deg);
+    }
+    }
